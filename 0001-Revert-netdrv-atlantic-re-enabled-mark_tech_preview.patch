@@ -1,0 +1,23 @@
+From c3ed2d0e7fbe6bc1002aafab8556ae0c84b235e9 Mon Sep 17 00:00:00 2001
+From: Eugene Syromiatnikov <esyr@redhat.com>
+Date: Tue, 26 Jun 2018 17:18:29 +0200
+Subject: [PATCH] Revert "[netdrv] atlantic: re-enabled mark_tech_preview"
+
+This reverts commit 7215f9e35017d1e80a40dfb8ed9057a92d4851db.
+---
+ drivers/net/ethernet/aquantia/atlantic/aq_pci_func.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+Index: src/drivers/net/ethernet/aquantia/atlantic/aq_pci_func.c
+===================================================================
+--- src.orig/drivers/net/ethernet/aquantia/atlantic/aq_pci_func.c	2018-06-26 17:54:00.016076234 +0200
++++ src/drivers/net/ethernet/aquantia/atlantic/aq_pci_func.c	2018-06-26 17:54:23.337837137 +0200
+@@ -201,8 +201,6 @@
+ 	u32 bar;
+ 	u32 numvecs;
+ 
+-	mark_tech_preview(AQ_CFG_DRV_NAME, THIS_MODULE);
+-
+ 	err = pci_enable_device(pdev);
+ 	if (err)
+ 		return err;

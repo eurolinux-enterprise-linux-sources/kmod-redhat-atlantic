@@ -1,0 +1,12 @@
+Index: src/drivers/net/ethernet/aquantia/atlantic/ver.h
+===================================================================
+--- src.orig/drivers/net/ethernet/aquantia/atlantic/ver.h	2018-06-26 17:50:18.393348333 +0200
++++ src/drivers/net/ethernet/aquantia/atlantic/ver.h	2018-06-26 17:54:11.278960766 +0200
+@@ -15,6 +15,6 @@
+ #define NIC_BUILD_DRIVER_VERSION           2
+ #define NIC_REVISION_DRIVER_VERSION        1
+ 
+-#define AQ_CFG_DRV_VERSION_SUFFIX "-kern"
++#define AQ_CFG_DRV_VERSION_SUFFIX "-kern_dup7.5"
+ 
+ #endif /* VER_H */
